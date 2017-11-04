@@ -164,9 +164,6 @@ let nums = evens.map((v, i) => v + i);
 console.log(odds);
 console.log(nums);
 
-
-*/
-
 //ARROW FUNCTION
 // let square = (num) => num * num;
 
@@ -184,3 +181,25 @@ let matt = {
 }
 
 matt.printFriends();
+
+*/
+
+//REST PARAMETER
+let f = (x, ...y) => {
+    console.log(y);
+    return x * y.length;
+}
+
+console.log(f(3, "hello", 2, false) === 9);
+
+//SPREAD OPARATOR
+let add = (a, b) => a + b;
+let nums = [2, 6];
+console.log(add(...nums))
+
+//Creating Array Literal using Spread Operator
+let a = [1, 4, 6];
+let b = [7, ...a, 9];
+b.push(a);
+console.log(b);
+console.log(b[b.length - 1]);

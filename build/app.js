@@ -166,25 +166,34 @@ let nums = evens.map((v, i) => v + i);
 console.log(odds);
 console.log(nums);
 
-
-*/
-
 //ARROW FUNCTION
 // let square = (num) => num * num;
 
 // console.log(square(4));
 
-var matt = {
+let matt = {
     name: "Matt",
     friends: ["Ann", "Olive", "Creez"],
 
-    printFriends: function printFriends() {
-        var _this = this;
-
-        this.friends.forEach(function (f) {
-            return console.log(_this.name + " knows " + f);
-        });
+    printFriends() {
+        this.friends.forEach(f =>
+            console.log(this.name + " knows " + f)
+        )
     }
-};
+}
 
 matt.printFriends();
+
+*/
+
+//REST PARAMETER
+var f = function f(x) {
+    for (var _len = arguments.length, y = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        y[_key - 1] = arguments[_key];
+    }
+
+    console.log(y);
+    return x * y.length;
+};
+
+console.log(f(3, "hello", 2, false) === 9);
