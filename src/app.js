@@ -1,5 +1,5 @@
-//THE LET KEYWORD WITH LEXICAL BLOCK SCOPING
 /*
+//THE LET KEYWORD WITH LEXICAL BLOCK SCOPING
 let shoppingCart = [{
     id: 0,
     product: "DVD",
@@ -19,8 +19,6 @@ for (let i = 0; i < shoppingCart.length; i++) {
     console.log("Item: " + item.product + " - Price: " + item.price)
 }
 
-*/
-
 //OBJECTS CREATION IN ES6
 function createDog(name, ability) {
     return {
@@ -33,3 +31,26 @@ function createDog(name, ability) {
 let a = createDog("Wolf", "Bark");
 
 console.log(JSON.stringify(a));
+*/
+
+//Computed Properties
+
+var prop = "foo";
+
+var o = {
+    [prop]: "Hey",
+    ["ba" + "r"]: "There!"
+}
+
+console.log(o.foo + " " + o.bar)
+
+function foo() {
+    return "firstname";
+}
+
+let obj = {
+    foo: "bar",
+    [foo()]: "Dennis"
+}
+
+console.log(JSON.stringify(obj));
