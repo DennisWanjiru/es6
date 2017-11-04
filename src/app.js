@@ -31,7 +31,6 @@ function createDog(name, ability) {
 let a = createDog("Wolf", "Bark");
 
 console.log(JSON.stringify(a));
-*/
 
 //Computed Properties
 
@@ -54,3 +53,43 @@ let obj = {
 }
 
 console.log(JSON.stringify(obj));
+
+*/
+
+//METHOD PROPERTIES
+let myObj = {
+    add(a, b) {
+        return a + b;
+    },
+
+    multiply(a, b) {
+        return a * b;
+    }
+}
+
+let b = myObj.multiply(2, 6);
+console.log(b);
+
+//OBJECT ASSIGN METHOD
+let obj = {
+    fname: "Dennis",
+    lname: "Wanjiru"
+};
+
+let obj2 = {
+    jina: "Chrus",
+
+    get lapili() {
+        return "Senanu";
+    }
+};
+
+let obj3 = {
+    namer: "Ken",
+    laname: "Milo"
+};
+
+let copy = Object.assign({}, obj, obj2, obj3);
+
+console.log(copy);
+console.log(obj);

@@ -1,7 +1,5 @@
 "use strict";
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 /*
 //THE LET KEYWORD WITH LEXICAL BLOCK SCOPING
 let shoppingCart = [{
@@ -35,25 +33,64 @@ function createDog(name, ability) {
 let a = createDog("Wolf", "Bark");
 
 console.log(JSON.stringify(a));
-*/
 
 //Computed Properties
 
-// var prop = "foo";
+var prop = "foo";
 
-// var o = {
-//     [prop]: "Hey",
-//     ["ba" + "r"]: "There!"
-// }
+var o = {
+    [prop]: "Hey",
+    ["ba" + "r"]: "There!"
+}
 
-// console.log(o.foo + " " + o.bar)
+console.log(o.foo + " " + o.bar)
 
 function foo() {
     return "firstname";
 }
 
-var obj = _defineProperty({
-    foo: "bar"
-}, foo(), "Dennis");
+let obj = {
+    foo: "bar",
+    [foo()]: "Dennis"
+}
 
 console.log(JSON.stringify(obj));
+
+*/
+
+//METHOD PROPERTIES
+var myObj = {
+    add: function add(a, b) {
+        return a + b;
+    },
+    multiply: function multiply(a, b) {
+        return a * b;
+    }
+};
+
+var b = myObj.multiply(2, 6);
+console.log(b);
+
+//OBJECT ASSIGN METHOD
+var obj = {
+    fname: "Dennis",
+    lname: "Wanjiru"
+};
+
+var obj2 = {
+    jina: "Chrus",
+
+    get lapili() {
+        return "Senanu";
+    }
+};
+
+var obj3 = {
+    namer: "Ken",
+    laname: "Milo"
+};
+
+var copy = Object.assign({}, obj, obj2, obj3);
+
+console.log(copy);
+console.log(obj);
