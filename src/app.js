@@ -101,8 +101,6 @@ let p = Number.parseFloat(k);
 console.log(typeof p);
 console.log(typeof k);
 
-*/
-
 //ARRAY
 let arr = Array.of("Dennis", 23, "Male");
 console.log(arr)
@@ -145,3 +143,44 @@ let names = arr2[Symbol.iterator]();
 for (let name of names) {
     console.log(name);
 }
+
+//CONST KEYWORD
+const colors = [];
+
+colors.push("Red");
+colors.push("Blue");
+colors.push("Green");
+console.log(colors)
+
+for (let color of colors) {
+    console.log(color)
+}
+
+/*
+//PLEASE EXPLAIN THIS CODE
+let evens = [2, 4, 6, 8, 10];
+let odds = evens.map(v => v + 1);
+let nums = evens.map((v, i) => v + i);
+console.log(odds);
+console.log(nums);
+
+
+*/
+
+//ARROW FUNCTION
+// let square = (num) => num * num;
+
+// console.log(square(4));
+
+let matt = {
+    name: "Matt",
+    friends: ["Ann", "Olive", "Creez"],
+
+    printFriends() {
+        this.friends.forEach(f =>
+            console.log(this.name + " knows " + f)
+        )
+    }
+}
+
+matt.printFriends();
